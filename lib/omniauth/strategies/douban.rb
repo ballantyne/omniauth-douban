@@ -23,7 +23,7 @@ module OmniAuth
         consumer
       end
 
-      uid { access_token.params[:id] }
+      uid { access_token.params[:douban_user_id] }
 
       # adapted from https://github.com/intridea/omniauth/blob/0-3-stable/oa-oauth/lib/omniauth/strategies/oauth/douban.rb#L38-53
       info do
