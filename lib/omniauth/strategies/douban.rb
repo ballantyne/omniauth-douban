@@ -30,7 +30,7 @@ module OmniAuth
         {
           :nickname => raw_info['db:uid']['$t'],
           :name => raw_info['title']['$t'],
-          :location => raw_info['location'] ? raw_info['location']['$t'] : nil,
+          :location => raw_info['db:location'] ? raw_info['db:location']['$t'] : nil,
           :image => raw_info['link'].find{|l| l['@rel'] == 'icon'}['@href'],
           :description => raw_info['content']['$t'],
           :urls => {
